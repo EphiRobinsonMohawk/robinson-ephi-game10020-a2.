@@ -18,6 +18,7 @@ public class PaletteMan : MonoBehaviour
     float sHPalette = 0f, sSPalette = 0f, sVPalette = 0f;
     float tHPalette = 0f, tSPalette = 0f, tVPalette = 0f;
 
+    public static event EventHandler openDoor;
 
     void Awake()
     {
@@ -56,7 +57,7 @@ public class PaletteMan : MonoBehaviour
 
     void OpenDoor()
     {
-        door.SetActive(false);
+        openDoor?.Invoke(this, EventArgs.Empty);
     }
 
 

@@ -7,7 +7,7 @@ public class AreaChecker : MonoBehaviour
     public PlayerController player;
 
     [field: SerializeField] private bool inInteractRange = false;
-    [field: SerializeField]  public AreaInteract interactTarget { get; private set; } = null;
+    [field: SerializeField]  public AreaInteract interactTarget = null;
 
     public Pickup itemHolding = null;
 

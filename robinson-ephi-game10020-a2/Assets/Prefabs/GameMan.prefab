@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843cd89e434572f46b03cab3fb3d6d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 0}
   paletteColourSeperation: 30
   pMinHue: 0
   pMaxHue: 1
@@ -70,3 +71,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f69094cb6dfcac64caae9e0ed908bd90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cellPrefab: {fileID: 5157490304878932515, guid: ceba17581c3d8814191296a2924238a1, type: 3}

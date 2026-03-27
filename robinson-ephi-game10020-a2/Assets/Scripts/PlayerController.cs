@@ -1,12 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
 public class PlayerController : MonoBehaviour
 {
     public AreaChecker areaChecker;
+    public static int cellCount = 1;
+    public List<GameObject> cellsIncorperated = new List<GameObject>();
+
     public SpriteRenderer spriteRenderer { get; private set; }
     public Rigidbody2D rb2d;
-    public float moveSpeed { get; private set; } = 10f;
+    public float moveSpeed { get; private set; } = 4f;
     [field: SerializeField] private bool dead = false;
 
     [field: SerializeField] private Vector2 input;
