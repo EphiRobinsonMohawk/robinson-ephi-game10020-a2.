@@ -5,7 +5,7 @@ using UnityEngine.SocialPlatforms;
 public class PlayerController : MonoBehaviour
 {
     public AreaChecker areaChecker;
-    public static int cellCount = 1;
+    public int cellCount = 1;
     public List<GameObject> cellsIncorperated = new List<GameObject>();
 
     public SpriteRenderer spriteRenderer { get; private set; }

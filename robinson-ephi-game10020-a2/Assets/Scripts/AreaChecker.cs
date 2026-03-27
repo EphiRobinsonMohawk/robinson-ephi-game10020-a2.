@@ -9,8 +9,6 @@ public class AreaChecker : MonoBehaviour
     [field: SerializeField] private bool inInteractRange = false;
     [field: SerializeField]  public AreaInteract interactTarget = null;
 
-    public Pickup itemHolding = null;
-
     private void Update()
     {
         gameObject.transform.position = player.gameObject.transform.position;
@@ -18,19 +16,9 @@ public class AreaChecker : MonoBehaviour
         //Interact Logic
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (inInteractRange && interactTarget.GetComponent<Pickup>() != null && itemHolding != null)
-            {
-                AreaInteract interact = itemHolding.GetComponent<AreaInteract>();
-                interact.TriggerSwitch(player);
-            }
-            else if (inInteractRange && interactTarget != null)
+            if (inInteractRange && interactTarget != null)
             {
                 interactTarget.TriggerSwitch(player);
-            }
-            else if (itemHolding != null)
-            {
-                AreaInteract interact = itemHolding.GetComponent<AreaInteract>();
-                interact.TriggerSwitch(player);
             }
         }
     }

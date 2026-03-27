@@ -33,5 +33,9 @@ public class Door : MonoBehaviour
     {
         isOpening = true;
         palette.enabled = false;
+        if (GetComponent<BoxCollider2D>())
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
 }

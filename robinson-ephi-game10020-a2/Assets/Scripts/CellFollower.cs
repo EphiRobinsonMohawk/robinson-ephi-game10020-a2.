@@ -37,7 +37,7 @@ public class CellFollower : MonoBehaviour, EventInterface
         if (!isIncorperated)
         {
             isIncorperated = true;
-            PlayerController.cellCount += 1;
+            GameMan.player.cellCount += 1;
             player.cellsIncorperated.Add(gameObject);
             areaInteract.enabled = false;
             tag = "Untagged";

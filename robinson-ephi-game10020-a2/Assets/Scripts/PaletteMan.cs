@@ -60,7 +60,6 @@ public class PaletteMan : MonoBehaviour
         openDoor?.Invoke(this, EventArgs.Empty);
     }
 
-
     void SwapP(object sender, EventArgs e)
     {
         NewPrimaryColour();
@@ -80,9 +79,9 @@ public class PaletteMan : MonoBehaviour
     void NewPrimaryColour()
     {
         primaryColor = UnityEngine.Random.ColorHSV(
-            pMinHue, pMaxHue,   // Hue range
-            pMinSat, pMaxSat, // Saturation
-            0f, 1f  // Value (not used)
+            pMinHue, pMaxHue,   // hue 
+            pMinSat, pMaxSat, // saturation
+            0f, 1f  //value
         );
         Color.RGBToHSV(primaryColor, out pHPalette, out pSPalette, out pVPalette);
     }
@@ -107,7 +106,7 @@ public class PaletteMan : MonoBehaviour
         Color.RGBToHSV(tertiaryColor, out tHPalette, out tSPalette, out tVPalette);
     }
 
-    void SeparatePalette()
+    void SeparatePalette() //Ensure palette starts with different colours for the door puzzle
     {
         while (Mathf.Abs(pHPalette - sHPalette) <= paletteColourSeperation)
             NewSecondaryColour();
