@@ -51,12 +51,15 @@ public class RedZone : MonoBehaviour
 
         if (rDiff > 0.2f || gDiff > 0.2f || bDiff > 0.2f)
         {
-            //destroy the last cell in the list and decrement cell count
-            GameObject lastCell = playerController.cellsIncorperated[playerController.cellsIncorperated.Count - 1];
+            if (playerController.cellsIncorperated.Count >= 1)
+            {
+                //destroy the last cell in the list and decrement cell count
+                GameObject lastCell = playerController.cellsIncorperated[playerController.cellsIncorperated.Count - 1];
 
-            Destroy(lastCell);
-            playerController.cellsIncorperated.RemoveAt(playerController.cellsIncorperated.Count - 1);
-            playerController.cellCount -= 1;
+                Destroy(lastCell);
+                playerController.cellsIncorperated.RemoveAt(playerController.cellsIncorperated.Count - 1);
+                playerController.cellCount -= 1;
+            }
         }
     }
 }

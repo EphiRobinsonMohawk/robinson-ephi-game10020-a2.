@@ -24,7 +24,7 @@ public class PaletteMan : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        NewPrimaryColour(); 
+        NewPrimaryColour();  //select random colours to start the game with
         NewSecondaryColour();
         NewTertiaryColour();
 

@@ -11,9 +11,10 @@ public class AreaChecker : MonoBehaviour
 
     private void Update()
     {
+        //make sure area bubble follows player
         gameObject.transform.position = player.gameObject.transform.position;
 
-        //Interact Logic
+        //Interaction Logic
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (inInteractRange && interactTarget != null)
@@ -24,6 +25,7 @@ public class AreaChecker : MonoBehaviour
     }
 
 
+    //Detect when something is in range to interact with
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactable"))
@@ -39,6 +41,7 @@ public class AreaChecker : MonoBehaviour
 
     }
 
+    //Detect when something has left interaction range
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactable"))
